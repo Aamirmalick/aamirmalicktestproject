@@ -1,25 +1,15 @@
-
+<!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-
-
-
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -147,10 +137,7 @@ background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
       width: 100%;
     }
 
-    /*   */
-
-
-    
+    /*   */    
       .nav > .nav-links > ul li{
         display: block;
         margin-bottom: 20px;
@@ -187,16 +174,6 @@ background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
     outline: none;
     box-shadow: none;
 }
-
-
-
-
-
-
-
-
-
-
 .preloader
 {
 position: fixed;
@@ -215,11 +192,6 @@ width: 100px;
 border-radius: 50%;
 animation: shake 1.5s infinite;
 }
-
-
-
-
-
 
 @keyframes shake
 {
@@ -241,14 +213,6 @@ animation: shake 1.5s infinite;
 overflow: hidden;
 float: left;text-align: center;padding: 5px 5px;text-decoration: none; font-size: 17px;
 }
-
-
-
-
-
-
-
-
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -278,7 +242,7 @@ background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
 </head>
 
 <body>
-<div class="preloader"> <img class="preloader-icon" src="https://acegif.com/wp-content/uploads/loading-79.gif" width="100" height="100" alt="My Site  Preloader"> </div>
+<div class="preloader"> <img class="preloader-icon" src="https://acegif.com/wp-content/uploads/loading-79.gif" width="100" height="100" alt="No Image"> </div>
       <div class="nav">
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
@@ -351,7 +315,7 @@ background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
  <?php
  if(isset($_POST['sbmt']))
  {
- $s11=$_POST['s11'];
+ $stockcompname=$_POST['stockcompname'];
  $url="https://cloud.iexapis.com/stable/stock/$s11/company?token=sk_1fa73430e7704fe4a0e43ab477ac2ac4";
      $ch=curl_init();
      curl_setopt($ch,CURLOPT_URL,$url);
@@ -360,9 +324,7 @@ background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
      curl_close($ch);
      $result=json_decode($result,true);
      if($result==true)
-     {
-
-     
+     { 
 ?>
 <table <table class="table w-100 p-3">
   <thead>
@@ -418,12 +380,10 @@ swal("No Available this name in Stock Market Company!", "No Data Found!", "warni
      <?php
 
  }
-
  }
      ?>
 <script>
 window.onload = function(){ document.querySelector(".preloader").style.display = "none"; }
 </script>
-
     </body>
     </html>
